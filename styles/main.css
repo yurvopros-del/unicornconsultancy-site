@@ -11,3 +11,14 @@
 /* Approved U emblem: transparent artwork, without a containing tile. */
 .brand img{width:38px;height:38px;object-fit:contain;display:block;flex-shrink:0;background:transparent;border:0;border-radius:0;box-shadow:none}
 @media(max-width:700px){.brand img{width:32px;height:32px}}
+
+/* Desktop sheet turns: a faint glass edge, with content hit targets unobstructed. */
+.page-turn-zones{display:none;position:absolute;inset:0;z-index:4;pointer-events:none}
+.page-turn-zone{position:absolute;top:0;bottom:0;width:50%;padding:0;border:0;border-radius:3px;background:transparent;color:var(--accent);pointer-events:none;opacity:0;transition:opacity .18s ease;box-shadow:inset 0 0 0 1px #255dde12}
+.zone-previous{left:0;background:linear-gradient(90deg,#255dde09,transparent 70%)}
+.zone-next{right:0;background:linear-gradient(270deg,#255dde09,transparent 70%)}
+.page-turn-zone span{position:absolute;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:30px;height:52px;border:1px solid #255dde22;border-radius:18px;background:#ffffff60;font-size:26px;font-weight:400;line-height:1;box-shadow:0 3px 15px #15243a08}
+.zone-previous span{left:10px}.zone-next span{right:10px}
+.page-turn-zone:focus-visible{opacity:1;outline:2px solid var(--accent);outline-offset:-3px}
+@media(min-width:701px) and (hover:hover) and (pointer:fine){.page-turn-zones{display:block}.deck-stage[data-turn=previous] .zone-previous:not(:disabled),.deck-stage[data-turn=next] .zone-next:not(:disabled){opacity:1}.deck-stage[data-turn] .slide{cursor:pointer}}
+@media(prefers-reduced-motion:reduce){.page-turn-zone{transition:none}}
