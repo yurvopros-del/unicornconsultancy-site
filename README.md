@@ -1,23 +1,17 @@
-# Unicorn Consultancy Sàrl
+# Unicorn Consultancy Sàrl — web presentation
 
-Static, dependency-free landing page. Public files are authored at the repository root; the Pages workflow stages only the four HTML pages, stylesheet, SVG asset, CNAME and `.nojekyll`.
+A static, accessible twelve-slide presentation based on the supplied Verdi & Co. / Unicorn Consultancy Sàrl Partner Profile 2026. All twelve source pages are represented in semantic HTML, with source artwork documented in assets/deck/README.md.
 
-## Preview
+## Navigation
 
-Serve the repository with any static HTTP server and open `index.html`. No build or JavaScript is required. All internal paths are relative, so the site works at a GitHub Pages project URL and a custom domain.
+Previous/next buttons, twelve section-menu targets, a slide selector, keyboard ArrowLeft/ArrowRight, and horizontal touch swipes. The presentation does not autoplay. Slide hash URLs support direct links; the earlier platform, route and approach hashes remain mapped. Small-screen navigation collapses to a menu. Reduced-motion preferences are respected. Without JavaScript, all twelve pages remain available sequentially.
 
-## Deployment boundary
+## Deployment
 
-- Repository: `yurvopros-del/unicornconsultancy-site`.
-- Deploy `main` through GitHub Actions; enable Pages with build type `workflow`.
-- First verify `https://yurvopros-del.github.io/unicornconsultancy-site/` and all three policy pages.
-- `CNAME` contains `www.unicornconsultancy.ch` as the intended future hostname. GitHub Actions does not configure the custom domain from this file. The custom-domain setting is managed separately from visual content deployments. The current visual redesign leaves existing Pages settings and CNAME untouched.
-- A later, separately authorized cutover must set the Pages custom domain before changing web DNS records. Enforce HTTPS once GitHub issues the custom-domain certificate.
-- No DNS, nameserver, Infomaniak, MX, SPF or TXT changes are part of this repository deployment.
-- Do not modify `yurvopros-del/theverdicosite`.
+The existing main-branch GitHub Pages workflow stages index.html, the three legal pages, CNAME, .nojekyll, styles, assets and scripts. No build dependencies are needed. The staging copy includes scripts/main.js for presentation navigation.
 
-## Content basis
+Visual/content updates do not change GitHub Pages settings, CNAME, DNS, nameservers, Infomaniak, MX, SPF or TXT records. Do not modify yurvopros-del/theverdicosite.
 
-Company identity is based on the supplied written brief. Visual assets, operating-role copy and the five transaction-route stages are grounded in the user-provided Verdi_Co_Transaction_Partner_Profile_2026.pdf. Extracted image provenance is recorded in assets/deck/README.md. The company-register extract was not provided. No contact email, performance claims, licenses or transaction examples have been invented. Company enquiries use the supplied postal address.
+## Content
 
-The site includes no forms, cookies, browser storage, analytics, external font requests or client-side scripts. The privacy notice identifies GitHub Pages hosting and its documented IP logging.
+Slide content and contacts follow the source presentation. Experience figures retain engagement-stage, indicative-parameter and non-completed-volume qualifiers. Company legal identity follows the user-supplied brief. The site uses no analytics, contact forms, cookies or browser storage. Mail links open the visitor’s email client. The legal, privacy and cookie pages remain accessible in the persistent footer.
